@@ -1,27 +1,26 @@
-using System;
 using System.Collections.Generic;
 
 namespace MEDICENTER
 {
     public class DecisionNode
     {
-        public string Id;
-        public string Pregunta;
-        public string Diagnostico;
-        public List<DecisionNode> Hijos;
-        public string RespuestaEsperada;
+        public string Id { get; set; }
+        public string Pregunta { get; set; }
+        public string Diagnostico { get; set; }
+        public List<DecisionNode> Hijos { get; set; }
+        public string RespuestaEsperada { get; set; }
 
-        public DecisionNode(string nodoId, string nodoPregunta)
+        public DecisionNode(string id, string pregunta)
         {
-            Id = nodoId;
-            Pregunta = nodoPregunta;
+            Id = id;
+            Pregunta = pregunta;
             Hijos = new List<DecisionNode>();
         }
 
-        public DecisionNode(string nodoId, string nodoDiagnostico, bool esHoja)
+        public DecisionNode(string id, string diagnostico, bool esHoja)
         {
-            Id = nodoId;
-            Diagnostico = nodoDiagnostico;
+            Id = id;
+            Diagnostico = diagnostico;
             Hijos = new List<DecisionNode>();
         }
 
